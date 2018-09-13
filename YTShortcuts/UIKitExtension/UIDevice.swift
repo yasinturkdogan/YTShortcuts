@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+@available(iOSApplicationExtension, unavailable)
 public extension UIDevice {
     
     static var width:CGFloat {

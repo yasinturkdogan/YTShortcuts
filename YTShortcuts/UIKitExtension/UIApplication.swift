@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+
 public extension UIApplication {
     
     /// Returns application version string
@@ -28,11 +29,12 @@ public extension UIApplication {
     }
     
     /// Opens given url in safari
+    @available(iOSApplicationExtension, unavailable)
     func open(url:URL) {
         if #available(iOS 10.0, *) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         } else {
-            UIApplication.shared.openURL(url)
+            _ = UIApplication.shared.openURL(url)
         }
     }
     
