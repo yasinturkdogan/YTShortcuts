@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension CGSize {
+public extension CGSize {
     
     /// Calculates size for a cell based on device width
     static func sizeForCell(numberOfItems:CGFloat, collectionMargin:CGFloat, cellSpacing:CGFloat, ratio:CGFloat, extraHeight:CGFloat) -> CGSize {

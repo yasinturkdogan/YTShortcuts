@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UITableView {
+public extension UITableView {
     /// Dequeues a cell with the same reuse identifier of the class name
     public func dequeue<T>()->T where T:UITableViewCell{
         return self.dequeueReusableCell(withIdentifier: T.cellIdentifier) as! T

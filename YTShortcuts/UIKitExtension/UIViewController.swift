@@ -9,8 +9,16 @@
 import Foundation
 import UIKit
 
-extension UIViewController {
+public extension UIViewController {
     class var storyboardID : String {
         return "\(self)"
+    }
+    
+    var safeAreaInsets:UIEdgeInsets {
+        if #available(iOS 11.0, *) {
+            return UIApplication.shared.keyWindow?.safeAreaInsets ?? UIEdgeInsets.zero
+        } else {
+            return UIEdgeInsets.zero
+        }
     }
 }

@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 public extension UIApplication {
     
     /// Returns application version string

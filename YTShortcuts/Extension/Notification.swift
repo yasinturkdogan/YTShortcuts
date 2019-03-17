@@ -8,15 +8,15 @@
 
 import Foundation
 
-public struct Event {
-    enum Application:String, EventProtocol {
+public class Event {
+    public enum Application:String, EventProtocol {
         case WillEnterBackground
         case DidEnterBackground
         case DidBecomeActive
         case DidRegisterForRemoteNotificationsWithDeviceToken
         case DidFinishLaunchingWithOptions
     }
-        
+    
     public static func remove(_ listener: AnyObject) {
         NotificationCenter.default.removeObserver(listener)
     }

@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 
 @IBDesignable
-public class IconButton: UIButton {
+open class IconButton: UIButton {
 
-    public override func awakeFromNib() {
+    open override func awakeFromNib() {
         super.awakeFromNib()
         render()
     }
     
-    public override func prepareForInterfaceBuilder() {
+    open override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         
         render()

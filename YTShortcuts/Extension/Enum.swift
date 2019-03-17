@@ -14,7 +14,6 @@ public protocol EnumCollection: Hashable {
 }
 
 public extension EnumCollection {
-    
     public static func cases() -> AnySequence<Self> {
         return AnySequence { () -> AnyIterator<Self> in
             var raw = 0

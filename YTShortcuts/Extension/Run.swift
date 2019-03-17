@@ -12,7 +12,7 @@ public class Run {
     
     /// Run given block after x seconds. Main thread is used to run the block.
     /// - Returns: A Closure to cancel request
-    @discardableResult public static func after(_ delay: Double, block: @escaping SimpleClosure) -> SimpleClosure {
+    @discardableResult public static func after(delay: Double, block: @escaping SimpleClosure) -> SimpleClosure? {
         var cancelled = false
         let cancelClosure: SimpleClosure = {
             cancelled = true
@@ -30,7 +30,7 @@ public class Run {
     }
     
     /// Runs given block in Main Thread
-    open class func onMainThread(_ block: @escaping SimpleClosure) {
+    public class func onMainThread(_ block: @escaping SimpleClosure) {
         DispatchQueue.main.async {
             block()
         }

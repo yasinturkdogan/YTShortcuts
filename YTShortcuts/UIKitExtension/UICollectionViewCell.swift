@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension UICollectionViewCell {
+public extension UICollectionViewCell {
     class var cellIdentifier : String {
         return "\(self)"
     }
@@ -17,5 +17,12 @@ extension UICollectionViewCell {
     /// registers cell to given collection view
     class func register(to:UICollectionView) {        
         to.register(UINib(nibName: "\(self)", bundle: nil), forCellWithReuseIdentifier: "\(self)");
+    }
+}
+
+
+public extension UICollectionReusableView {
+    class var reuseIdentifier : String {
+        return "\(self)"
     }
 }

@@ -8,8 +8,14 @@
 
 import Foundation
 
-extension Int {
+public extension Int {
     /// Cast to string
+    func toString()->String {
+        return String(self)
+    }
+}
+
+public extension Int32 {
     func toString()->String {
         return String(self)
     }

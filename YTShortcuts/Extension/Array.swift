@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Array where Element : Equatable {
+public extension Array where Element : Equatable {
     /// Remove first collection element that is equal to the given `object`. Object should implement Equatable protocol    
     mutating func remove(_ object : Iterator.Element) {
         if let index = self.index(of: object) {
@@ -17,9 +17,10 @@ extension Array where Element : Equatable {
     }
 }
 
-extension Collection {    
+public extension Collection {    
     /// Returns the element at the specified index iff it is within bounds, otherwise nil.
     subscript (safe index: Index) -> Element? {
         return indices.contains(index) ? self[index] : nil
     }
 }
+

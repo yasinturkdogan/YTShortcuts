@@ -10,15 +10,15 @@ import Foundation
 import UIKit
 
 @IBDesignable
-public class RoundImageView: UIImageView {
+open class RoundImageView: UIImageView {
     @IBInspectable var cornerRadius:CGFloat = 8
     
-    public override func awakeFromNib() {
+    open override func awakeFromNib() {
         super.awakeFromNib()
         render()
     }
     
-    public override func prepareForInterfaceBuilder() {
+    open override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         render()
     }

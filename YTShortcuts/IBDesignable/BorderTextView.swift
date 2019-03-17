@@ -10,17 +10,17 @@ import Foundation
 import UIKit
 
 @IBDesignable
-public class BorderTextView: UITextView {
+open class BorderTextView: UITextView {
     @IBInspectable var borderColor:UIColor = .lightGray
     @IBInspectable var borderWidth:CGFloat = 1
     @IBInspectable var cornerRadius:CGFloat = 5
     
-    public override func awakeFromNib() {
+    open override func awakeFromNib() {
         super.awakeFromNib()
         render()
     }
     
-    public override func prepareForInterfaceBuilder() {
+    open override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         render()
     }
