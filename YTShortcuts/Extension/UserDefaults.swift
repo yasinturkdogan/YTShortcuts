@@ -38,12 +38,21 @@ public extension UserDefaultsKey {
         UserDefaults.standard.synchronize()
     }
     
+    func save(_ value: URL) {
+        UserDefaults.standard.set(value, forKey: self.rawValue)
+        UserDefaults.standard.synchronize()
+    }
+    
     func get(defaultValue: String? = nil) -> String? {
         return UserDefaults.standard.string(forKey: self.rawValue) ?? defaultValue
     }
     
     func get() -> Int {
         return UserDefaults.standard.integer(forKey: self.rawValue)
+    }
+    
+    func get() -> URL? {
+        return UserDefaults.standard.url(forKey: self.rawValue)
     }
     
     func delete() {
