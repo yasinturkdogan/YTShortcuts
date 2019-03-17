@@ -11,7 +11,6 @@ import UIKit
 
 @available(iOSApplicationExtension, unavailable)
 public extension UIDevice {
-    
     static var width:CGFloat {
         get {
             return UIApplication.shared.keyWindow!.frame.size.width
