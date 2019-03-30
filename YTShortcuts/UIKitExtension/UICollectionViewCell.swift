@@ -25,4 +25,9 @@ public extension UICollectionReusableView {
     class var reuseIdentifier : String {
         return "\(self)"
     }
+    
+    /// registers cell to given collection view
+    class func register(to:UICollectionView, kind:String) {
+        to.register(UINib(nibName: "\(self)", bundle: nil), forSupplementaryViewOfKind: kind, withReuseIdentifier: "\(self)")
+    }
 }
