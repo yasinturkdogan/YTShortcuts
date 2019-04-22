@@ -11,7 +11,7 @@ import UIKit
 
 public extension UIStoryboard {
     /// Instantiates a storyboard with the same identifier of the class name
-    public func instantiateView<T>()->T where T:UIViewController {
+    func instantiateView<T>()->T where T:UIViewController {
         return self.instantiateViewController(withIdentifier: T.storyboardID) as! T
     }
 }

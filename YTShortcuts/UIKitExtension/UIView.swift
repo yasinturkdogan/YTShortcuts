@@ -28,7 +28,7 @@ public extension UIView  {
     }
     
     @available (iOS 9, *)
-    public func addSubviewToFit(childView:UIView) {
+    func addSubviewToFit(childView:UIView) {
         self.addSubview(childView)
         childView.translatesAutoresizingMaskIntoConstraints = false
         childView.topAnchor.constraint(equalTo: topAnchor).isActive = true

@@ -17,7 +17,7 @@ public extension UIScrollView {
     }
     
     ///Adds a pull up control
-    public func addPullUpControl(_ target:Any, onPullComplete:Selector) {
+    func addPullUpControl(_ target:Any, onPullComplete:Selector) {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(target, action: onPullComplete, for: .valueChanged)
         self.addSubview(refreshControl)

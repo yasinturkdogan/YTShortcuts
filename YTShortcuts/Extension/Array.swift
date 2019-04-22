@@ -11,7 +11,7 @@ import Foundation
 public extension Array where Element : Equatable {
     /// Remove first collection element that is equal to the given `object`. Object should implement Equatable protocol    
     mutating func remove(_ object : Iterator.Element) {
-        if let index = self.index(of: object) {
+        if let index = self.firstIndex(of: object) {
             self.remove(at: index)
         }
     }

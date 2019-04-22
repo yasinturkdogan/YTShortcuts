@@ -20,7 +20,7 @@ public extension String {
     ///Calculates height for given UILabel
     func calculateHeight(for label:UILabel) -> CGFloat {
         let constraintRect = CGSize(width: label.frame.width, height: .greatestFiniteMagnitude)
-        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: label.font], context: nil)
+        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: label.font!], context: nil)
         return boundingBox.height
     }
     
@@ -32,12 +32,12 @@ public extension String {
     }
     
     ///Returns the localized string using the main bundle
-    public func localize() -> String {
+    func localize() -> String {
         return NSLocalizedString(self, comment: "")
     }
     
     ///Returns the localized string using the main bundle and replaces the %index parameters with given values
-    public func localize(with: String...) -> String {
+    func localize(with: String...) -> String {
         var localizedText = self.localize()
         var index: Int = 1
         for param in with {
