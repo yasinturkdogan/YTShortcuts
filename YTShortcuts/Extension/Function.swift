@@ -9,5 +9,6 @@
 import Foundation
 
 public typealias SimpleClosure = ()->()
+public typealias BooleanClosure = (Bool)->()
 public typealias StringClosure = (String)->()
 public typealias ErrorClosure = (Error)->()
