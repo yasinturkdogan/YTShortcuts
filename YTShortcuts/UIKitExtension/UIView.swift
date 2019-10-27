@@ -11,7 +11,7 @@ import UIKit
 
 public extension UIView  {
     ///Drops shadow with given parameters
-    func dropShadow(color:UIColor = UIColor.fromHex(value:0x000000, alpha: 0.5),
+    func dropShadow(color:UIColor = UIColor(hex:0x000000, alpha: 0.5),
                     radius:CGFloat = 2.0,
                     opacity:Float = 1,
                     size:CGSize = CGSize(width:1.0, height:1.0)) {

@@ -20,3 +20,9 @@ public extension Int32 {
         return String(self)
     }
 }
+
+public extension Int64 {
+    func toString()->String {
+        return String(self)
+    }
+}

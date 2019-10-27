@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'YTShortcuts'
-  s.version          = '0.1'
+  s.version          = '0.2'
   s.summary          = 'Some handful shortcuts to make life easier'
   s.description      = <<-DESC
  YTShortcuts provides useful shortcuts to reduce redundant code and make it cleaner.
