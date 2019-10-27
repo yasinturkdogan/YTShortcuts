@@ -10,11 +10,12 @@ import Foundation
 import UIKit
 
 public extension UIColor {
+    
     /// Converts hex value to UICOlor
-    static func fromHex(value: NSInteger, alpha:CGFloat = 1) -> UIColor {
-        let red: CGFloat = CGFloat((value & 0xFF0000) >> 16) / 255.0
-        let green: CGFloat = CGFloat((value & 0x00FF00) >> 8) / 255.0
-        let blue: CGFloat = CGFloat((value & 0x0000FF) >> 0) / 255.0
-        return UIColor(red: red, green: green, blue: blue, alpha: alpha);
+    convenience init(hex: NSInteger, alpha:CGFloat = 1) {
+        let red: CGFloat = CGFloat((hex & 0xFF0000) >> 16) / 255.0
+        let green: CGFloat = CGFloat((hex & 0x00FF00) >> 8) / 255.0
+        let blue: CGFloat = CGFloat((hex & 0x0000FF) >> 0) / 255.0
+        self.init(red: red, green: green, blue: blue, alpha: alpha);
     }    
 }

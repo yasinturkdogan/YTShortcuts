@@ -26,5 +26,4 @@ open class RoundButton: UIButton {
     private func render() {
         self.layer.cornerRadius = cornerRadius
     }
-    
 }
